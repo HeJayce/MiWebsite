@@ -4,5 +4,82 @@
     height: 40px;
     line-height: 40px;
     background-color: #333333;
+}
+/*设置浮动*/
+.service, .topbar li {
+    float: left;
+}
+.user-info{
+    float: right;
+}
+.shop-cart{
+    float: right;
+    margin-left: 26px;
+}
+/*设置超链接颜色*/
+.topbar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+.topbar a:hover{
+    color: #ffffff;
+}
+.topbar .line{
+    font-size: 12px;
+    color: #424242;
+    padding: 0 8px;
+}
+.shop-cart a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+.shop-cart:hover a{
+    background-color: white;
+    color: #ff6700;
+}
+.shop-cart i{
+    margin-right:  2px;
+}
+.app{
+    position: relative;
+}
+/*app小三角,去除上边框*/
+li:hover > .app::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: block;
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
 
 }
+li:hover > .app .qrcode{
+    display: block;
+}
+.app .qrcode{
+    display: none;
+    position: absolute;
+    left: -40px;
+    width: 124px;
+    height: 148px;
+    line-height: 1px;   /*字体继承了父代的行高40，必须重置，否则会溢出 */
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0 ,.3);
+}
+.app .qrcode img{
+    width: 90px;
+    margin: 17px 17px 15px 17px;
+}
+
+
