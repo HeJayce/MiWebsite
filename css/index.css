@@ -175,7 +175,49 @@ li:hover > .app .qrcode{
     box-shadow: 0 5px 3px rgba(0,0,0,.2);
 
 }
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    float: right;
 
+    margin-top: 25px;
+
+}
+.search-wrapper .search-inp{
+    float: left;
+    box-sizing: border-box;
+    border: none;
+    width: 244px;
+    padding: 0 10px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid rgb(224,224,224);
+    outline: none;
+
+}
+.search-wrapper .search-btn{
+    float: left;
+    height: 50px;
+    width: 52px;
+    padding: 0;
+    border: none;
+    background-color: white;
+    color: #616161;
+    font-size: 16px;
+    border: 1px solid rgb(224,224,224);
+    border-left: none;
+}
+/*设置input获取焦点样式*/
+
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + button{
+    border-color: #ff6700;
+}
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color: white;
+
+}
 
 
 
