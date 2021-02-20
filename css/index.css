@@ -64,22 +64,132 @@ li:hover > .app::after{
 
 }
 li:hover > .app .qrcode{
-    display: block;
+    /*display: block;*/
+    height: 148px;
 }
 .app .qrcode{
-    display: none;
+    /*display: none;*/
     position: absolute;
     left: -40px;
     width: 124px;
-    height: 148px;
+    height: 0px;
+    overflow: hidden;
     line-height: 1px;   /*字体继承了父代的行高40，必须重置，否则会溢出 */
     text-align: center;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0 ,.3);
+    transition: height 0.3s;   /*使用过度0.3s，让高度从0到148*/
+    z-index: 999;
 }
 .app .qrcode img{
     width: 90px;
     margin: 17px 17px 15px 17px;
 }
+.header{
+    height: 100px;
+    /*background-color: #bfa;*/
+
+
+}
+.header-wrapper{
+    position: relative;
+}
+
+.header .logo{
+    position: relative;
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+
+}
+.header .logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #ff6827;
+    background-image: url(../img/mi-logo.png);
+    background-position: center;
+    display: block;
+    transition: left 0.2s;
+}
+.header .logo .home{
+
+    background-image: url(../img/mi-home.png);
+    left: -55px;
+}
+.header .logo:hover .mi{
+    left: 55px;
+
+}
+.header .logo:hover .home{
+    left: 0;
+}
+/*导航条*/
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}
+.nav-wrapper li{
+    float: left;
+}
+.header .nav{
+    /*width: 792px;*/
+    /*background-color: #bfa;*/
+    height: 100px;
+    line-height: 100px ;
+    padding-left:  58px;
+}
+.nav-wrapper li a{
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.all-goods{
+    visibility: hidden;
+}
+.nav-wrapper li a:hover{
+    color: #ff6700;
+
+}
+
+.nav .goods-info{
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+    background-color: #ffffff;
+    /*border-top: 1px solid rgb(224,224,224);*/
+    /*box-shadow: 0 5px 3px rgba(0,0,0,.2);*/
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: height  0.3s;
+}
+.nav li:not(:first-of-type):not(:nth-child(9)):not(:nth-child(10)):hover ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    background-color: #ff6700;
+    border-top: 1px solid rgb(224,224,224);
+    box-shadow: 0 5px 3px rgba(0,0,0,.2);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
