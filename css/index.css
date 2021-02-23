@@ -283,12 +283,80 @@ ul .left-menu li a:hover{
     border-color: rgba(0,0,0,.4);
     background-color: rgba(255,255,255,.4);
 }
+div.adc{
+    height: 170px;
+    margin-top: 14px;/*会被w覆盖，指定div可实现*/
+}
+.adc .shortcut,
+.adc .adc-img,
+.adc li{
+    float: left;
+}
 
+.adc .shortcut{
+    width: 234px;
+    height: 168px;
+    background-color: #5f5750;
+    margin-right: 14px;
+    padding-top: 2px;
 
+}
+.adc  .adc-img li{
+    width: 316px;
+    margin-right: 15px;
 
+}
+.adc  .adc-img li:last-child {
+    margin: 0;
+}
+.adc .adc-img img{
+    width: 100%;
+}
+.adc .shortcut  a{
+    color: #cfccca;
+    display: block;
+    width: 76px;
+    height: 84px;
+    text-align: center;
+    overflow: hidden;
+}
+.adc .shortcut  i{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+.adc .shortcut  a:hover {
+    color: #ffffff;
+}
+.adc .shortcut li{
+    position: relative;
+}
 
+.adc .shortcut  li::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #665e57;
+    left: 0;
+    top: 0 ;
+    right: 0;
+    margin: 0 auto;
+}
+.adc .shortcut  li::after {
+    content: '';
+    position: absolute;
+    background-color: #665e57;
+    height: 68px;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0;
 
-
+}
 
 
 
